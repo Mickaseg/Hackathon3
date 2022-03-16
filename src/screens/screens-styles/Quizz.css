@@ -1,0 +1,13 @@
+.quizz {
+  text-align: center;
+  height: 95vh;
+  width: 100vw;
+}
+
+.quizzContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
