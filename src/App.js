@@ -3,11 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./screens/Home.js";
 import Quizz from "./screens/Quizz.js";
 import ArticlePage from "./screens/ArticlePage.js";
+import Navbar from "./components/Navbar.js";
 
 function App() {
   return (
     <div className="App">
       <header></header>
+      {/*       <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quizz" element={<Quizz />} />
