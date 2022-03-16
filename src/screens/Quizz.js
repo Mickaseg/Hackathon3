@@ -10,20 +10,26 @@ const Quizz = () => {
 
   const getCurrentQuestion = () => {
     axios
-      .get(`${process.env.REACT_APP_BACK}/quizz/${currentQuestionNumber}`)
+      .get(
+        `${process.env.REACT_APP_BACK}/quizz/questions/${currentQuestionNumber}`
+      )
       .then((res) => res.data)
       .then((data) => setCurrentQuestion(data));
   };
 
   useEffect(() => {
     getCurrentQuestion();
-  }, []);
+  }, [currentQuestionNumber]);
 
   return (
     <div className="quizz">
       <h1>QUIZZ</h1>
       <div className="quizzContainer">
-        <QuizzDiv question={currentQuestion} />
+        <QuizzDiv
+          question={currentQuestion}
+          currentQuestionNumber={currentQuestionNumber}
+          setCurrentQuestionNumber={setCurrentQuestionNumber}
+        />
       </div>
     </div>
   );
