@@ -1,5 +1,85 @@
-.adminnavbar {
-  position: fixed;
-  left: 0;
-  top: 10vh;
+/* .home {
+  overflow: hidden;
+} */
+.topBanner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.titleHomeContainer {
+  display: flex;
+  flex-direction: column;
+}
+.titlehome {
+  display: flex;
+  flex-direction: row;
+  font-size: x-large;
+  justify-content: flex-end;
+}
+
+.titlehomeBleu {
+  color: var(--blue-enedis);
+}
+
+.titlehomeVert {
+  color: var(--green-enedis);
+}
+
+.sousTitle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  background-color: red;
+  width: 250px;
+}
+
+.bgHub {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bgHub img {
+  overflow: hidden;
+}
+
+.homeContentContainer {
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+}
+
+.containerContenuInfo {
+  display: flex;
+  width: 50vw;
+  background-color: yellow;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.imgDescHomeInfo {
+  width: 50%;
+  overflow: hidden;
+}
+.imgDescHomeInfo img {
+  width: 100%;
+}
+
+.ctaBleu {
+  background-color: var(--blue-enedis);
+  width: 100%;
+}
+.containerHomeInfoDesc {
+}
+
+.containerHomeInfoBtn {
 }

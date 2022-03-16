@@ -6,12 +6,6 @@ const Navbar = () => {
   const [active, setActive] = useState(false);
   return (
     <div className={active ? "navbaradmin active" : "navbaradmin"}>
-      <div
-        className={active ? "nav active" : "nav"}
-        onClick={() => setActive(!active)}
-      >
-        <i class="fa-solid fa-angle-right" />
-      </div>
       <NavLink to="/">
         <div className="link">Home</div>
       </NavLink>
