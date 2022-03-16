@@ -1,11 +1,14 @@
-/* .home {
+.home {
   overflow: hidden;
-} */
+  max-height: 95vh;
+  z-index: 2;
+}
 .topBanner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
+  /*   outline: 1px solid red; */
 }
 
 .titleHomeContainer {
@@ -33,13 +36,15 @@
 }
 
 .logo {
-  background-color: red;
-  width: 250px;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  max-height: 5vh;
 }
 
 .bgHub {
-  width: 100vw;
-  height: 100%;
+  width: 100%;
+  /*  height: 100%; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,33 +58,103 @@
 }
 
 .homeContentContainer {
-  background-color: blue;
+  /*  background-color: blue; */
   width: 100%;
-  height: 100%;
+  /*   height: 80vh; */
+  /*   display: flex; */
 }
 
 .containerContenuInfo {
   display: flex;
-  width: 50vw;
-  background-color: yellow;
-  overflow: hidden;
+  width: 70vw;
   flex-direction: row;
+  height: 100%;
 }
 
 .imgDescHomeInfo {
   width: 50%;
-  overflow: hidden;
 }
 .imgDescHomeInfo img {
   width: 100%;
 }
 
-.ctaBleu {
-  background-color: var(--blue-enedis);
-  width: 100%;
+.containerDescBtn {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transform: translate(-20%, -5%);
 }
+
+.ctaBleu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-enedis);
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 20px 32px;
+  /* width: 70%; */
+  margin: 10px 0px 10px 10px;
+}
+
+.ctaBleu > a {
+  color: whitesmoke;
+}
+
+.ctaBleu:hover {
+  background-color: white;
+  color: var(--blue-enedis) !important;
+  outline: 1px solid var(--blue-enedis);
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+}
+
 .containerHomeInfoDesc {
+  background-color: white;
+  padding: 32px;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .containerHomeInfoBtn {
+}
+
+.containerAccesQuiz {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  transform: translate(0, -50%);
+}
+
+.containerQuizBtn {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translate(40%, 5%);
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.containerHomeQuizDesc {
+  background-color: white;
+  padding: 32px;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.15);
+  width: 80%;
+}
+
+.containerHomeQuizBtn {
+  margin: 10px 10px 10px 0;
+}
+
+.imgDescHomeQuiz {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+}
+
+.imgDescHomeQuiz img {
+  width: 100%;
+  background-color: grey;
 }
