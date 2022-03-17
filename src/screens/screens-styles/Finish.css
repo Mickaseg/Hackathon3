@@ -127,3 +127,17 @@
 
 .checkmarkFinish img {
 }
+
+@media (max-width: 1368px) {
+  .FinishFrame {
+    width: 75vw;
+    height: 75vh;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 1px 4px 4px rgb(0 0 0 / 15%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

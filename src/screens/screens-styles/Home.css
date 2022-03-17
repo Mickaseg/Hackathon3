@@ -58,6 +58,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 1250px) {
+  .bgHub {
+    display: none;
+  }
+}
+
 .homeContentContainer {
   width: 100%;
   height: 48vh;
@@ -156,4 +162,20 @@
 .imgDescHomeQuiz img {
   width: 100%;
   background-color: grey;
+}
+
+@media (max-width: 1250px) {
+  .ctaBleu {
+    padding: 10px 12px;
+  }
+  .containerHomeInfoDesc {
+    padding: 24px;
+  }
+
+  .containerHomeQuizDesc {
+    padding: 24px;
+  }
+  .containerDescBtn {
+    z-index: 2;
+  }
 }

@@ -34,10 +34,7 @@ const Quizz = () => {
               <br></br>
               <p>
                 Integer id odio vitae turpis iaculis luctus id ut elit.
-                Phasellus dictum facilisis maximus. Nullam pharetra fermentum
-                sapien, ut mattis eros ornare non. Ut sodales urna et massa
-                suscipit, ut consequat elit euismod. Vestibulum vel nibh massa.
-                Etiam in libero neque.
+                Phasellus dictum facilisis maximus.
               </p>
               <br></br>
               <a href="http://www.mettreunlienversdeladoc.com" target="_blank">
