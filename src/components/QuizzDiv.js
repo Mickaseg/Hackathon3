@@ -89,15 +89,6 @@ const QuizzDiv = ({
             <div>{el.answer_text} </div>
           </div>
         ))}
-
-        {answers.map((el) => (
-          <div
-            className="answerText"
-            onClick={() => handleChoice(el.isCorrect)}
-          >
-            {el.answer_text}
-          </div>
-        ))}
       </div>
     </div>
   );

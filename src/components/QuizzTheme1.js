@@ -11,13 +11,15 @@ const QuizzTheme1 = () => {
   const [endQuizz, setEndQuizz] = useState(false);
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
   const [questionsTheme1, setQuestionsTheme1] = useState([]);
-  console.log(questionsTheme1);
+  const [choice, setChoice] = useState(false);
+  // console.log(questionsTheme1[0].image);
+  console.log(score);
 
-  const getQuestionsTheme1 = () => {
+  const getQuestionsTheme1 = async () => {
     axios
       .get(`${process.env.REACT_APP_BACK}/quizz/questions/theme1`)
       .then((res) => res.data)
-      .then((data) => setQuestionsTheme1(data));
+      .then((data) => setQuestionsTheme1(data) || console.log(questionsTheme1));
   };
 
   const getAnswers = () => {
@@ -28,26 +30,26 @@ const QuizzTheme1 = () => {
         }/answers`
       )
       .then((res) => res.data)
-      .then((data) => setAnswers(data));
+      .then((data) => setAnswers(data)) || console.log(answers);
   };
 
   const nextQuestion = currentQuestionNumber + 1;
 
   const setNextQuestion = () => {
-    if (currentQuestionNumber < 10) setCurrentQuestionNumber(nextQuestion);
+    if (currentQuestionNumber + 1 < 10) {
+      setCurrentQuestionNumber(nextQuestion);
+      setChoice(false);
+    } else {
+      setEndQuizz(true);
+    }
   };
 
   const handleChoice = (isCorrect) => {
-    if (isCorrect === 1 && nextQuestion < questionsTheme1.length) {
+    if (isCorrect === 1 && choice !== true) {
       setScore(score + 1);
-      setNextQuestion();
-    } else if (isCorrect === 1 && nextQuestion >= questionsTheme1.length) {
-      setScore(score + 1);
-      setEndQuizz(true);
-    } else if (nextQuestion >= questionsTheme1.length) {
-      setEndQuizz(true);
+      setChoice(true);
     } else {
-      setNextQuestion();
+      setChoice(true);
     }
   };
 
@@ -64,7 +66,7 @@ const QuizzTheme1 = () => {
         <div>{score} / 10</div>
       ) : (
         <div className="quizzComposant">
-          <h1 className="bloc-h-g-h1">QUIZ PREVENTION TECHNICIEN</h1>
+          <h1 className="bloc-h-g-h1">QUIZ DE PREVENTION TECHNICIEN</h1>
 
           <div className="bloc-head">
             <div className="bloc-head-gauche">
@@ -85,7 +87,11 @@ const QuizzTheme1 = () => {
             <div className="bloc-head-droite">
               <div className="bloc-image">
                 <img
-                  src="https://www.metiers-electricite.com/wp-content/uploads/2018/05/Installateur-electricien-metier-650x-650x350.jpg"
+                  src={
+                    questionsTheme1[currentQuestionNumber]
+                      ? questionsTheme1[currentQuestionNumber].image
+                      : ""
+                  }
                   alt=""
                   className="img"
                 />
@@ -100,16 +106,18 @@ const QuizzTheme1 = () => {
             <img src={checkvert} alt="" className="icone-answer" />
             UNE SEULE REPONSE EST JUSTE
           </div>
-          {/* <div className="answer-info reponse-fausse">
-            <img src={declined} alt="" className="icone-answer" />
-            PLUSIEURS REPONSES SONT JUSTES
-          </div> */}
 
           <div className="space-40px"></div>
           <div className="bloc-4answers">
             {answers.map((el, key = index) => (
               <div
-                className="answer"
+                className={
+                  choice
+                    ? el.isCorrect
+                      ? "answer true"
+                      : "answer false"
+                    : "answer"
+                }
                 onClick={() => handleChoice(el.isCorrect)}
               >
                 <div className="answer-letter">{key + 1}</div>
@@ -118,6 +126,15 @@ const QuizzTheme1 = () => {
               </div>
             ))}
           </div>
+          {choice ? (
+            <div className="buttondiv">
+              <button className="boutonNext" onClick={() => setNextQuestion()}>
+                NEXT
+              </button>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       )}
     </>
