@@ -1,0 +1,129 @@
+.quiz-page {
+  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  /* padding: 40px; */
+  border: 3px solid orange;
+}
+
+.quiz-page > h1 {
+  margin-bottom: 40px;
+}
+
+/* .finish {
+  height: 100vh;
+} */
+.finishContainer {
+  display: flex;
+  justify-items: center;
+  width: 100%;
+  height: calc(100vh - 50px - 40px - 40px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+.topFinishFrame {
+  display: flex;
+  height: 20%;
+  justify-content: space-between;
+}
+
+.topFinishFrame img {
+  height: 12vh;
+}
+
+.FinishFrame {
+  width: 50vw;
+  height: 50vh;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.FinishFrame h1 {
+  color: var(--blue-enedis);
+}
+
+.jobFinishFrame {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* outline: 1px solid red; */
+  align-items: center;
+  justify-content: center;
+}
+
+.btnFinishFrame {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50px;
+  /*  outline: 1px solid red; */
+  align-items: flex-end;
+}
+
+.btnFinishFrame button {
+  background-color: var(--green-enedis); /* Green */
+  border: none;
+  color: whitesmoke;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btnFinishFrame:hover button {
+  background-color: var(--green-enedis); /* Green */
+  color: whitesmoke;
+  box-shadow: inset 1px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.radioJob {
+  margin: 8px;
+}
+
+.radioJob label {
+  margin-left: 20px;
+}
+
+.radioJob input[type="radio"] {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  background-color: red;
+}
+
+.radioJob input[type="radio"]:checked:after {
+  /*   width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ffa500;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white; */
+}
+
+.checkmarkFinish {
+  height: 25vh;
+  transform: translate(50%, -30%);
+  bottom: 0%;
+  filter: invert(82%) sepia(21%) saturate(1394%) hue-rotate(30deg)
+    brightness(90%) contrast(92%);
+}
+
+.checkmarkFinish img {
+}
