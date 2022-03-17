@@ -116,6 +116,7 @@
   border-radius: 25px;
   border: 2px solid var(--neutral-800);
   box-shadow: 2px 0 1px 1px var(--neutral-900);
+  padding-right: 20px;
 }
 
 .false {

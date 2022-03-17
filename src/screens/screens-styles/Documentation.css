@@ -16,8 +16,67 @@
 }
 
 .documentationContainer {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 80px 0;
+  flex-wrap: wrap;
+  padding: 80px 40px;
+  background-color: var(--neutral-300);
+}
+
+.documentation-conteneur{
+  width: 70%;
+}
+
+.titre-bloc-intro{
+  text-align: left;
+}
+
+.bloc-intro-doc{
+  text-align: justify;
+  margin: 40px 0;
+}
+
+.liste-cards{
+  /* border: 2px solid green; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-pwpt{
+  height: cover;
+  width: 250px;
+  background-color: aquamarine;
+  border: 2px solid grey;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 40px 0;
+}
+
+.img-card{
+height: 100%;
+width: 100%;
+border-radius: 15px 15px 0 0;
+}
+
+.card-blocText{
+padding: 1rem;
+}
+
+
+
+.title-card{
+text-align: center;
+text-transform: uppercase;
+padding-bottom: 0.5rem;
+}
+
+.p-card{
+text-align: justify;
 }
