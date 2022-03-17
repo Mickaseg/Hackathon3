@@ -37,9 +37,11 @@ const Home = () => {
                 travail chez ENEDIS et en dehors.
               </p>
             </div>
+            <NavLink to="/documentation">
             <div className="ctaBleu containerHomeInfoBtn ">
               <p>ACCEDER AU CONTENU D’INFORMATIONS</p>
             </div>
+            </NavLink>
           </div>
         </div>
         {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\   QUIZ    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
@@ -55,7 +57,7 @@ const Home = () => {
                 créer de nouveaux reflexes !
               </p>
             </div>
-            <NavLink to="/quizz">
+            <NavLink to="/quiz">
               <div className="ctaBleu containerHomeQuizBtn">
                 <p>ACCEDER AU TEST DE CONNAISSANCES</p>
               </div>
