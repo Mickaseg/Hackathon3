@@ -79,43 +79,16 @@ const QuizzDiv = ({
       <div className="space-40px"></div>
 
       <div className="bloc-4answers">
-        {/* {answers.map((el) => ( */}
-        <div className="answer" onClick={() => handleChoice(el.isCorrect)}>
-          <div className="answer-letter">A</div>
-          <div className="answer-text">
-            Voici la vraie réponse à cette question qui est vérifiable via des
-            statistiques de l'an 2000 sur impot.
+        {answers.map((el) => (
+          <div className="answer" onClick={() => handleChoice(el.isCorrect)}>
+            <div className="answer-letter">A</div>
+            <div className="answer-text">
+              Voici la vraie réponse à cette question qui est vérifiable via des
+              statistiques de l'an 2000 sur impot.
+            </div>
+            <div>{el.answer_text} </div>
           </div>
-          {/* <div>{el.answer_text} </div> */}
-        </div>
-        {/* ))} */}
-
-        <div className="answer" onClick={() => handleChoice(el.isCorrect)}>
-          <div className="answer-letter">B</div>
-          <div className="answer-text">
-            Voici la vraie réponse à cette question qui est vérifiable via des
-            statistiques de l'an 2000 sur impot.gou.com
-          </div>
-          {/* <div>{el.answer_text} </div> */}
-        </div>
-
-        <div className="answer" onClick={() => handleChoice(el.isCorrect)}>
-          <div className="answer-letter">C</div>
-          <div className="answer-text">
-            Voici la vraie réponse à cette question qui est vérifiable via des
-            statistiques de l'an 2000 sur impot.gou.com
-          </div>
-          {/* <div>{el.answer_text} </div> */}
-        </div>
-
-        <div className="answer" onClick={() => handleChoice(el.isCorrect)}>
-          <div className="answer-letter">D</div>
-          <div className="answer-text">
-            Voici la vraie réponse à cette question qui est vérifiable via des
-            statistiques de l'an 2000 sur impot.gou.com
-          </div>
-          {/* <div>{el.answer_text} </div> */}
-        </div>
+        ))}
 
         {answers.map((el) => (
           <div
