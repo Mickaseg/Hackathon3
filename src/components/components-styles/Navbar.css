@@ -36,9 +36,3 @@
 .nav.active {
   transform: translateX(220px) rotate(540deg);
 }
-
-a {
-  color: white;
-  text-decoration: none;
-  margin-bottom: 30px;
-}

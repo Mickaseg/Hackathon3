@@ -1,7 +1,8 @@
+import { Link, NavLink } from "react-router-dom";
 import Navbar from "../components/Navbar.js";
 import "./screens-styles/Home.css";
 /* import logo_fond_blanc from "../assets/logo_fond_blanc.png"; */
-/* import logo_fond_blanc from "src/assets/logo_enedis_fondblanc.png"; */
+import logo_fond_blanc from "../assets/logo_enedis_fondblanc.png";
 import bgHub from "../assets/bgHub.png";
 import quizHack3 from "../assets/quizHack3.PNG";
 
@@ -14,14 +15,14 @@ const Home = () => {
         <div className="titleHomeContainer">
           <div className="titlehome">
             <h1 className="titlehomeVert">Ô</h1>
-            <h1></h1>
             <h1 className="titlehomeBleu">COURANT</h1>
           </div>
           <div className="sousTitle">
-            S’informer - Se former - Appliquer - Controler
+            Se former&nbsp;-&nbsp;Appliquer&nbsp;-&nbsp;Contrôler
           </div>
         </div>
-        <div className="logo"></div>
+
+        <img className="logo" src={logo_fond_blanc}></img>
       </div>
       <div className="homeContentContainer">
         <div className="containerContenuInfo">
@@ -31,14 +32,34 @@ const Home = () => {
           <div className="containerDescBtn">
             <div className="containerHomeInfoDesc">
               <p>
-                Permettre à toute personne de s’informer, d’appliquer et de
-                controler les principes fondamentaux de la sécurité au travail
-                chez ENEDIS et en dehors.
+                Permettre à toute personne de <b>s’informer</b>, d’appliquer et
+                de controler les principes fondamentaux de la sécurité au
+                travail chez ENEDIS et en dehors.
               </p>
             </div>
             <div className="ctaBleu containerHomeInfoBtn ">
               <p>ACCEDER AU CONTENU D’INFORMATIONS</p>
             </div>
+          </div>
+        </div>
+        {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\   QUIZ    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+        <div className="containerAccesQuiz">
+          <div className="imgDescHomeQuiz">
+            <img src={quizHack3}></img>
+          </div>
+          <div className="containerQuizBtn">
+            <div className="containerHomeQuizDesc">
+              <p>
+                <b>Vérifier vos connaissances</b> en participant à un quiz sur
+                le thème de la sécurité préventive. Analyser les réponses et
+                créer de nouveaux reflexes !
+              </p>
+            </div>
+            <NavLink to="/quizz">
+              <div className="ctaBleu containerHomeQuizBtn">
+                <p>ACCEDER AU TEST DE CONNAISSANCES</p>
+              </div>
+            </NavLink>
           </div>
         </div>
       </div>
