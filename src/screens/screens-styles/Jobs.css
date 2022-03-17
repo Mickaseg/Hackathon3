@@ -22,7 +22,7 @@
   display: flex;
   justify-items: center;
   width: 100%;
-  height: calc(100vh - 50px - 40px - 40px);
+  height: calc(100vh - 50px - 80px - 40px);
   justify-content: center;
   align-items: center;
   border-radius: 30px;
@@ -31,7 +31,7 @@
   width: 50vw;
   height: 50vh;
   background-color: white;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 40px;
   display: flex;
@@ -39,17 +39,69 @@
   justify-content: space-between;
 }
 
+.topjobsFrame h1 {
+  margin-bottom: 20px;
+}
 .jobsFrame h1 {
   color: var(--blue-enedis);
 }
 
 .jobjobsFrame {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  /* outline: 1px solid red; */
+  height: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.jobsFrameBtn {
+  display: flex;
+  color: whitesmoke;
+  /* outline: 1px solid var(--blue-enedis); */
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
+  align-items: flex-end;
+  box-shadow: inset 0px -80px 60px -40px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.jobsFrameBtn:hover {
+  transform: scale(102%);
+  transition: 0.1s;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.15),
+    inset 0px -80px 60px -40px rgba(0, 0, 0, 0.9);
+}
+
+.linkJobs {
+  width: 30%;
+}
+
+.jobsFrameBtn img {
+  height: 100%;
+  z-index: -1;
+}
+
+.jobsFrameBtn h2 {
+  display: flex;
+  z-index: 2;
+  background-color: transparent;
+  position: absolute;
+  /*   -webkit-text-stroke: 1px black; */
+}
+
+.jobsFrameTech {
+  background-image: url("../../assets/techs.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jobsFrameAutres {
+  background-image: url("../../assets/autres.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .btnjobsFrame {

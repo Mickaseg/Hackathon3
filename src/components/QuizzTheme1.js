@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import checkvert from "./../assets/check_vert.png";
 import declined from "./../assets/cercle_canceled.png";
+import Finish from "../screens/Finish.js";
 const QuizzTheme1 = () => {
   const [questionsTheme1, setQuestionsTheme1] = useState([]);
   const [answers, setAnswers] = useState([]);
@@ -74,7 +75,7 @@ const QuizzTheme1 = () => {
     <>
       <Navbar />
       {endQuizz ? (
-        <div>{score} / 10</div>
+        <Finish />
       ) : (
         <div className="quizzComposant">
           <h1 className="bloc-h-g-h1">QUIZ DE PREVENTION TECHNICIEN</h1>

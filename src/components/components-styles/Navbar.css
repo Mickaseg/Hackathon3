@@ -5,9 +5,10 @@
   height: 50px;
   display: flex;
   flex-direction: row;
-  border: 2px solid pink;
+  /*   border: 2px solid pink; */
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .white-navbar-logo {
@@ -22,14 +23,20 @@
 }
 
 .navbar-link {
-  color: white;
-  background-color: var(--blue-500);
+  color: var(--blue-enedis);
+  background-color: transparent;
   font-size: 16px;
   margin-left: 20px;
   padding: 8px 20px;
   width: 100%;
-  /* border: 2px solid var(--blue-700); */
-  border-radius: 25px;
+  border: 2px solid var(--blue-500);
+  /*  border-radius: 25px; */
   display: flex;
   justify-content: center;
+}
+
+.navbar-link:hover {
+  color: whitesmoke;
+  background-color: var(--blue-enedis);
+  box-shadow: inset 1px 4px 4px rgba(0, 0, 0, 0.15);
 }

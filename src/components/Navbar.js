@@ -18,7 +18,7 @@ const Navbar = () => {
           Documentation
           {/* Voir pour sous routes : 8 Fondamentaux, TOP C MA VIE, etc etc */}
         </NavLink>
-        <NavLink to="/quiz" className="navbar-link">
+        <NavLink to="/jobs" className="navbar-link">
           Questionnaire
         </NavLink>
       </div>

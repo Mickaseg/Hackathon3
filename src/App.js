@@ -22,7 +22,6 @@ function App() {
         <Route path="/quiz/prevention-technicien" element={<QuizzTheme1 />} />
         <Route path="/quiz/prevention-generale" element={<QuizzTheme2 />} />
         <Route path="/documentation" element={<Documentation />} />
-        <Route path="/quiz01" element={<QuizzTheme1 />} />
         <Route path="/finish" element={<Finish />} />
         <Route path="/jobs" element={<Jobs />} />
       </Routes>
