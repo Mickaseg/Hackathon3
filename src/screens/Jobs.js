@@ -16,14 +16,14 @@ const Jobs = () => {
             <h1>Quel est votre profil ?</h1>
           </div>
           <div className="jobjobsFrame">
-            <Link className="niksamer" to="/quiz01">
-              <div className="jobsFrameBtn jobsFrameTech">
-                <h2>Technicien.e</h2>
-              </div>
-            </Link>
-            <Link className="niksamer" to="">
+            <Link className="linkJobs" to="">
               <div className="jobsFrameBtn jobsFrameAutres">
                 <h2>Général</h2>
+              </div>
+            </Link>
+            <Link className="linkJobs" to="/quiz01">
+              <div className="jobsFrameBtn jobsFrameTech">
+                <h2>Technicien.e</h2>
               </div>
             </Link>
           </div>
