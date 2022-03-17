@@ -124,6 +124,6 @@
   filter: invert(82%) sepia(21%) saturate(1394%) hue-rotate(30deg)
     brightness(90%) contrast(92%);
 }
-
-.checkmarkFinish img {
+.score {
+  padding: 1.5%;
 }

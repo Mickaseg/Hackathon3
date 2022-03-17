@@ -9,16 +9,18 @@ import Navbar from "../components/Navbar";
 
 import { Link } from "react-router-dom";
 
-const Quizz = () => {
+const Finish = ({ score }) => {
   return (
     <div className="finish">
       <div className="finishContainer">
         <div className="FinishFrame">
           <div className="topFinishFrame">
-            <h1>Félicitation !</h1>
+            <h1>Félicitation ! </h1>
             <img src={medal}></img>
           </div>
           <div className="jobFinishFrame">
+            <h2 className="score">Votre score : {score} / 10</h2>
+
             <div className="radioJobWrapper">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
               <br></br>
@@ -53,4 +55,4 @@ const Quizz = () => {
   );
 };
 
-export default Quizz;
+export default Finish;

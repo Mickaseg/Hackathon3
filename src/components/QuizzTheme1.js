@@ -75,7 +75,7 @@ const QuizzTheme1 = () => {
     <>
       <Navbar />
       {endQuizz ? (
-        <Finish />
+        <Finish score={score} />
       ) : (
         <div className="quizzComposant">
           <h1 className="bloc-h-g-h1">QUIZ DE PREVENTION TECHNICIEN</h1>
