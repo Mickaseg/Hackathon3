@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import Navbar from "../components/Navbar.js";
 import "./screens-styles/Home.css";
-/* import logo_fond_blanc from "../assets/logo_fond_blanc.png"; */
 import logo_fond_blanc from "../assets/logo_enedis_fondblanc.png";
 import bgHub from "../assets/bgHub.png";
 import quizHack3 from "../assets/quizHack3.PNG";
@@ -52,9 +51,9 @@ const Home = () => {
           <div className="containerQuizBtn">
             <div className="containerHomeQuizDesc">
               <p>
-                <b>Vérifier vos connaissances</b> en participant à un quiz sur
-                le thème de la sécurité préventive. Analyser les réponses et
-                créer de nouveaux reflexes !
+                <b>Vérifiez vos connaissances</b> en participant à un quiz sur
+                le thème de la sécurité préventive. Analysez les réponses et
+                créez de nouveaux reflexes !
               </p>
             </div>
             <NavLink to="/jobs">
