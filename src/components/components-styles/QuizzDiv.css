@@ -1,12 +1,215 @@
-.quizzDiv {
-  border: 2px solid red;
+.quizzComposant {
+  /* border: 2px solid red; */
+  width: 100%;
+}
+
+.bloc-head {
+  background-color: var(--blue-600);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bloc-head-gauche {
+  height: 100%;
+  width: 35%;
+}
+
+.bloc-h-g-h1 {
+  color: white;
+  padding: 40px 0 60px 0;
+  background-color: var(--blue-600);
+}
+
+.bloc-h-g-h2bis {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: var(--blue-600);
+  color: white;
+}
+
+.bloc-head-gauche-bloc {
+  background-color: var(--neutral-600);
+  padding: 0;
+}
+
+.question-bloc {
+  background-color: var(--blue-200);
+  min-height: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 20px;
+}
+
+.bloc-head-droite {
+  height: 100%;
+  width: 35%;
+  background-color: var(--neutral-300);
+}
+
+.bloc-image {
+  width: 100%;
+  border-top: 20px solid white;
+  border-right: 20px solid white;
+  border-left: 20px solid white;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.space-40px {
+  /* border: 2px solid red; */
+  height: 40px;
+}
+
+.answer-info {
+  /* border: 3px solid blue; */
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.icone-answer {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.reponse-juste {
+  color: var(--green-enedis);
+}
+
+.reponse-fausse {
+  text-decoration: line-through;
+  color: var(--neutral-600);
+}
+
+.bloc-4answers {
+  /* border: 3px solid green; */
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  margin: 0 auto 40px;
+  min-height: 100%;
+  max-height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  border-radius: 25px;
+  border: 2px solid var(--green-enedis);
+  box-shadow: 2px 0 1px 1px var(--green-600);
+}
+
+.answer-letter {
+  height: 40px;
+  width: 40px;
+  background-color: var(--green-enedis);
+  box-shadow: 2px 0 1px 1px var(--green-600);
+  border-radius: 30px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-text {
+  max-width: 100%;
+  padding: 0 10px;
+  height: max-content;
+  /* border: 2px solid red; */
+}
+
+/*COPIE MISE EN FORME AVANT REFONTE
+
+.quizzComposant {
   width: 50%;
   height: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blocHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin:0 0 20px 0;
+  border: 3px solid white;
+  background-color: white;
+  border-radius: 25px;
+  width: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(90, 90, 90, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+
+
+.quizz-ordre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+
+.quizz-cache {
+  border: 3px solid var(--neutral-200);
+  background-color: var(--neutral-200);
+  color: var(--blue-600);
+  filter: grayscale(20);
+}
+
+.quizz-encours {
+  background-color: var(--green-enedis);
+  color: white;
+
+}
+
+.quizz-effectue {
+  background-color: var(  --green-700);
+  color: white;
+}
+
+.quizzScore {
+  border: 3px solid var(--green-enedis);
+  width: fit-content;
+}
+
+.quizzDiv {
+  border: 5px solid var(--blue-enedis);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .img {
   width: 100%;
   height: 50%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+  border-bottom: 2px solid grey;
+}
+
+.questionContainer{
+  height: 100px;
+  background-color: var(--blue-500);
 }
 
 .answerContainer {
@@ -15,12 +218,34 @@
   padding: 5%;
 }
 
-.answer {
+.answerBloc {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 200px;
+  width: 40%;
   height: 50px;
+  border-radius: 25px;
   border: 1px solid green;
+  background-color: rgb(236, 231, 231);
   cursor: pointer;
 }
+
+.answerId {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid red;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.answerText {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #1423dc;
+  width: 20rem;
+}
+
+
+*/

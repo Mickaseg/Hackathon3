@@ -1,20 +1,27 @@
-import React from "react";
-import { useState } from "react";
 import "./components-styles/Navbar.css";
 import { NavLink } from "react-router-dom";
+import logoblanc from "../../src/assets/logo_enedis_fondblanc.png";
+
 const Navbar = () => {
-  const [active, setActive] = useState(false);
   return (
-    <div className={active ? "navbaradmin active" : "navbaradmin"}>
+    <div className="navbar">
       <NavLink to="/">
-        <div className="link">Home</div>
+        <img
+          src={logoblanc}
+          alt="logo blanc enedis"
+          className="white-navbar-logo"
+        />
       </NavLink>
-      <NavLink to="/quizz">
-        <div className="link">Quizz</div>
-      </NavLink>
-      <NavLink to="/article">
-        <div className="link">Articles</div>
-      </NavLink>
+
+      <div className="navbar-item">
+        <NavLink to="/quizz" className="navbar-link">
+          Documentation
+          {/* Voir pour sous routes : 8 Fondamentaux, TOP C MA VIE, etc etc */}
+        </NavLink>
+        <NavLink to="/quizz" className="navbar-link">
+          Questionnaire
+        </NavLink>
+      </div>
     </div>
   );
 };

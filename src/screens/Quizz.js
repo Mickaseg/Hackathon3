@@ -2,6 +2,8 @@ import "./screens-styles/Quizz.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import QuizzDiv from "../components/QuizzDiv";
+import Navbar from "../components/Navbar";
+import backgroundquizz from "../assets/ENEDIS_FIL_CONCEPTUEL_FOND_BLANC_RVB_EXE_02.png";
 
 const Quizz = () => {
   const [currentQuestion, setCurrentQuestion] = useState([]);
@@ -11,10 +13,9 @@ const Quizz = () => {
   const getCurrentQuestion = () => {
     axios
       .get(
-        `${process.env.REACT_APP_BACK}/quizz/questions/${currentQuestionNumber}`
+        `${process.env.REACT_APP_BACK}quizz/questions/${currentQuestionNumber}`
       )
-      .then((res) => res.data)
-      .then((data) => setCurrentQuestion(data));
+      .then((res) => console.log(res.data) || setCurrentQuestion(res.data));
   };
 
   useEffect(() => {
@@ -22,16 +23,17 @@ const Quizz = () => {
   }, [currentQuestionNumber]);
 
   return (
-    <div className="quizz">
-      <h1>QUIZZ</h1>
-      <div className="quizzContainer">
+    <>
+      <Navbar />
+      <div className="quiz-page">
         <QuizzDiv
           question={currentQuestion}
           currentQuestionNumber={currentQuestionNumber}
           setCurrentQuestionNumber={setCurrentQuestionNumber}
         />
+
       </div>
-    </div>
+    </>
   );
 };
 
