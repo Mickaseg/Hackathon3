@@ -55,7 +55,7 @@ const Quizz = () => {
           <img src="" alt="" />
           <div className="img-select-quiz prev-tech">PREVENTION TECHNICIEN</div>
         </Link>
-        <Link to="/" className="bloc-choix">
+        <Link to="/quiz/prevention-generale" className="bloc-choix">
           <img src="" alt="" />
           <div className="img-select-quiz prev-gen">PREVENTION GENERALE</div>
         </Link>

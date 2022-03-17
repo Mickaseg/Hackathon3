@@ -1,6 +1,6 @@
 import axios from "axios";
 import "./components-styles/QuizzDiv.css";
-import Reponse from "./Reponse";
+import Popup from "./Popup";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import checkvert from "./../assets/check_vert.png";
@@ -131,6 +131,14 @@ const QuizzTheme1 = () => {
               <button className="boutonNext" onClick={() => setNextQuestion()}>
                 NEXT
               </button>
+            </div>
+          ) : (
+            ""
+          )}
+
+          {choice ? (
+            <div className="popup">
+              <div></div>
             </div>
           ) : (
             ""
