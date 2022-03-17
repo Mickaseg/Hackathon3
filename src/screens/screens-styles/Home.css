@@ -2,6 +2,7 @@
   overflow: hidden;
   max-height: 95vh;
   z-index: 2;
+  overflow: visible;
 }
 .topBanner {
   display: flex;
@@ -43,8 +44,8 @@
 }
 
 .bgHub {
-  width: 100%;
-  /*  height: 100%; */
+  /*   width: 100%; */
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -58,10 +59,8 @@
 }
 
 .homeContentContainer {
-  /*  background-color: blue; */
   width: 100%;
-  /*   height: 80vh; */
-  /*   display: flex; */
+  height: 54vh;
 }
 
 .containerContenuInfo {
