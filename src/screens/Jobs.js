@@ -1,42 +1,31 @@
 import "./screens-styles/Jobs.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import QuizzDiv from "../components/QuizzDiv";
+
 import Navbar from "../components/Navbar";
-import backgroundquizz from "../assets/ENEDIS_FIL_CONCEPTUEL_FOND_BLANC_RVB_EXE_02.png";
-import QuizzTheme2 from "../components/QuizzTheme2";
-import QuizzTheme1 from "../components/QuizzTheme1";
+import techs from "../assets/techs.jpg";
 import { Link } from "react-router-dom";
 
-const Quizz = () => {
+const Jobs = () => {
   return (
     <div className="jobs">
       <Navbar />
       <div className="jobsContainer">
         <div className="jobsFrame">
           <div className="topjobsFrame">
-            <h1>Etes-vous ?</h1>
+            <h1>Quel est votre profil ?</h1>
           </div>
           <div className="jobjobsFrame">
-            <div className="radioJobWrapper">
-              <div className="radioJob">
-                <input
-                  type="radio"
-                  id="huey"
-                  name="drone"
-                  value="huey"
-                  checked
-                />
-                <label for="huey">Technicien.e</label>
+            <Link className="niksamer" to="/quiz01">
+              <div className="jobsFrameBtn jobsFrameTech">
+                <h2>Technicien.e</h2>
               </div>
-              <div className="radioJob">
-                <input type="radio" id="huey" name="drone" value="huey" />
-                <label for="huey">Autres</label>
+            </Link>
+            <Link className="niksamer" to="">
+              <div className="jobsFrameBtn jobsFrameAutres">
+                <h2>Général</h2>
               </div>
-            </div>
-          </div>
-          <div className="btnjobsFrame">
-            <button>Valider</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -44,4 +33,4 @@ const Quizz = () => {
   );
 };
 
-export default Quizz;
+export default Jobs;
