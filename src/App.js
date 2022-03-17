@@ -7,6 +7,7 @@ import Finish from "./screens/Finish.js";
 import ArticlePage from "./screens/ArticlePage.js";
 import Navbar from "./components/Navbar.js";
 import QuizzTheme1 from "./components/QuizzTheme1";
+import QuizzTheme2 from "./components/QuizzTheme2";
 import Documentation from "./screens/Documentation";
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
         <Route path="/quiz" element={<Quizz />} />
         <Route path="/article" element={<ArticlePage />} />
         <Route path="/quiz/prevention-technicien" element={<QuizzTheme1 />} />
+        <Route path="/quiz/prevention-generale" element={<QuizzTheme2 />} />
         <Route path="/documentation" element={<Documentation />} />
-        <Route path="/quiz01" element={<QuizzTheme1 />} />
         <Route path="/finish" element={<Finish />} />
         <Route path="/jobs" element={<Jobs />} />
       </Routes>
