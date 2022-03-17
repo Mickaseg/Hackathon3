@@ -14,11 +14,11 @@ const Navbar = () => {
       </NavLink>
 
       <div className="navbar-item">
-        <NavLink to="/quizz" className="navbar-link">
+        <NavLink to="/documentation" className="navbar-link">
           Documentation
           {/* Voir pour sous routes : 8 Fondamentaux, TOP C MA VIE, etc etc */}
         </NavLink>
-        <NavLink to="/quizz" className="navbar-link">
+        <NavLink to="/quiz" className="navbar-link">
           Questionnaire
         </NavLink>
       </div>

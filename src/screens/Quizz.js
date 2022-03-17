@@ -49,9 +49,15 @@ const Quizz = () => {
   return (
     <div className="quizz">
       <Navbar />
+      <h1 className="titre-h1-fondblanc">CHOIX DU QUESTIONNAIRE</h1>
       <div className="quizzContainer">
-        <Link to="/quiz01">
-          <div>Quiz 01</div>
+        <Link to="/quiz/prevention-technicien" className="bloc-choix">
+          <img src="" alt="" />
+          <div className="img-select-quiz prev-tech">PREVENTION TECHNICIEN</div>
+        </Link>
+        <Link to="/" className="bloc-choix">
+          <img src="" alt="" />
+          <div className="img-select-quiz prev-gen">PREVENTION GENERALE</div>
         </Link>
       </div>
     </div>
