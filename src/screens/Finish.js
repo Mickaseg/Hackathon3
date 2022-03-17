@@ -40,10 +40,7 @@ const Finish = ({ score }) => {
                 Etiam in libero neque.
               </p>
               <br></br>
-              <a href="http://www.mettreunlienversdeladoc.com" target="_blank">
-                {" "}
-                http://www.mettreunlienversdeladoc.com
-              </a>
+              <Link to="/"></Link>
             </div>
           </div>
           <div className="btnFinishFrame">
