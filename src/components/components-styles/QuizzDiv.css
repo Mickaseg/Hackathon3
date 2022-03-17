@@ -148,16 +148,31 @@
 }
 
 .boutonNext {
+  font-size: 28px;
   color: white;
   background-color: var(--blue-enedis);
   border: 1px solid blue;
   border-radius: 10px;
   padding: 5px;
   margin-right: 15%;
+
+  position: absolute;
+  right: -20px;
+  bottom: 18%;
 }
 
-.buttondiv {
-  text-align: right;
-  width: 100%;
+.boutonNext:hover {
+  background-color: white;
+  color: var(--blue-enedis);
+  transition: 0.2s ease-in;
+}
+
+.popup {
+  background-color: white;
+  bottom: 40%;
+  right: 40%;
   border: 1px solid red;
+  position: fixed;
+  width: 20%;
+  height: 20%;
 }

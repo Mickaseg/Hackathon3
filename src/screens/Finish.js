@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 const Quizz = () => {
   return (
     <div className="finish">
-      <Navbar />
       <div className="finishContainer">
         <div className="FinishFrame">
           <div className="topFinishFrame">
