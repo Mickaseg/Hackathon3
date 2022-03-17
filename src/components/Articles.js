@@ -8,7 +8,7 @@ const Articles = () => {
 const getArticles = () => {
   axios
     .get(
-      `${process.env.REACT_APP_BACK}/articles`
+      `${process.env.REACT_APP_BACK}`
     )
     .then((res) => res.data)
     .then((data) => setArticle(data));
