@@ -6,11 +6,12 @@ import Navbar from "./Navbar";
 import checkvert from "./../assets/check_vert.png";
 import declined from "./../assets/cercle_canceled.png";
 const QuizzTheme1 = () => {
+  const [questionsTheme1, setQuestionsTheme1] = useState([]);
   const [answers, setAnswers] = useState([]);
+  const [article, setArticle] = useState([]);
   const [score, setScore] = useState(0);
   const [endQuizz, setEndQuizz] = useState(false);
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
-  const [questionsTheme1, setQuestionsTheme1] = useState([]);
   const [choice, setChoice] = useState(false);
   // console.log(questionsTheme1[0].image);
   console.log(score);
@@ -52,10 +53,20 @@ const QuizzTheme1 = () => {
       setChoice(true);
     }
   };
+  const getArticles = () => {
+    axios
+      .get(
+        `${process.env.REACT_APP_BACK}/articles/${currentQuestionNumber + 1}`
+      )
+      .then((res) => res.data)
+      .then((data) => setArticle(data));
+  };
+  console.log(article);
 
   useEffect(() => {
     getQuestionsTheme1();
     getAnswers();
+    getArticles();
   }, [currentQuestionNumber, endQuizz]);
 
   console.log(answers);
@@ -136,13 +147,13 @@ const QuizzTheme1 = () => {
             ""
           )}
 
-          {choice ? (
+          {/* {choice ? (
             <div className="popup">
-              <div></div>
+              <div>{article.content}</div>
             </div>
           ) : (
             ""
-          )}
+          )} */}
         </div>
       )}
     </>
