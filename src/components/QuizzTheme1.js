@@ -2,7 +2,7 @@ import axios from "axios";
 import "./components-styles/QuizzDiv.css";
 import Reponse from "./Reponse";
 import { useState, useEffect } from "react";
-
+import Navbar from "./Navbar";
 import checkvert from "./../assets/check_vert.png";
 import declined from "./../assets/cercle_canceled.png";
 const QuizzTheme1 = () => {
@@ -59,6 +59,7 @@ const QuizzTheme1 = () => {
   console.log(answers);
   return (
     <>
+      <Navbar />
       {endQuizz ? (
         <div>{score} / 10</div>
       ) : (
@@ -99,10 +100,10 @@ const QuizzTheme1 = () => {
             <img src={checkvert} alt="" className="icone-answer" />
             UNE SEULE REPONSE EST JUSTE
           </div>
-          <div className="answer-info reponse-fausse">
+          {/* <div className="answer-info reponse-fausse">
             <img src={declined} alt="" className="icone-answer" />
             PLUSIEURS REPONSES SONT JUSTES
-          </div>
+          </div> */}
 
           <div className="space-40px"></div>
           <div className="bloc-4answers">

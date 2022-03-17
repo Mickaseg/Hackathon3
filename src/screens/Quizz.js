@@ -48,7 +48,7 @@ const Quizz = () => {
 
   return (
     <div className="quizz">
-      <h1>QUIZZ</h1>
+      <Navbar />
       <div className="quizzContainer">
         <Link to="/quiz01">
           <div>Quiz 01</div>

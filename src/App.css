@@ -37,10 +37,29 @@
   font-family: "Public Sans", sans-serif;
 }
 
+:-webkit-any-link {
+}
+a {
+  text-decoration: none;
+  margin-bottom: 0;
+  /* color: whitesmoke; */
+}
+
+/* a:-webkit-any-link {
+  color: transparent;
+  text-decoration: none;
+} */
+
 .App {
   min-height: 100vh;
   width: 100%;
   height: 100%;
+  padding: 40px;
+  min-height: 100vh;
+  width: 100%;
+  /*  background-color: whitesmoke; */
+
+  /*   overflow: hidden; */
 }
 
 /*   body::-webkit-scrollbar {

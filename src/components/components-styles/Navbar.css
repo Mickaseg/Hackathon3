@@ -1,16 +1,16 @@
 .navbar {
-  background-color: white;
+  background-color: transparent;
   height: 90px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px ;
+  padding: 0 20px;
 }
 
-.white-navbar-logo{
-width: 10rem;
-margin: -10px 0 0 -20px;
+.white-navbar-logo {
+  width: 10rem;
+  margin: -10px 0 0 -20px;
 }
 
 .navbar-item {
