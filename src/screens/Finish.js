@@ -21,7 +21,9 @@ const Quizz = () => {
           </div>
           <div className="jobFinishFrame">
             <div className="radioJobWrapper">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <p>
+                Votre score est <b>8/10</b> !
+              </p>
               <br></br>
               <p>
                 Fusce venenatis lorem non lorem tempor, a rhoncus mauris
