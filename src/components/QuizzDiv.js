@@ -3,7 +3,7 @@ import "./components-styles/QuizzDiv.css";
 import checkvert from "./../assets/check_vert.png";
 import declined from "./../assets/cercle_canceled.png";
 
-import Reponse from "./Reponse";
+import Popup from "./Popup";
 import { useState, useEffect } from "react";
 const QuizzDiv = ({
   question,

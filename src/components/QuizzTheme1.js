@@ -1,16 +1,18 @@
 import axios from "axios";
 import "./components-styles/QuizzDiv.css";
-import Reponse from "./Reponse";
+import Popup from "./Popup";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import checkvert from "./../assets/check_vert.png";
 import declined from "./../assets/cercle_canceled.png";
+import Finish from "../screens/Finish.js";
 const QuizzTheme1 = () => {
+  const [questionsTheme1, setQuestionsTheme1] = useState([]);
   const [answers, setAnswers] = useState([]);
+  const [article, setArticle] = useState([]);
   const [score, setScore] = useState(0);
   const [endQuizz, setEndQuizz] = useState(false);
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
-  const [questionsTheme1, setQuestionsTheme1] = useState([]);
   const [choice, setChoice] = useState(false);
   // console.log(questionsTheme1[0].image);
   console.log(score);
@@ -52,10 +54,20 @@ const QuizzTheme1 = () => {
       setChoice(true);
     }
   };
+  const getArticles = () => {
+    axios
+      .get(
+        `${process.env.REACT_APP_BACK}/articles/${currentQuestionNumber + 1}`
+      )
+      .then((res) => res.data)
+      .then((data) => setArticle(data));
+  };
+  console.log(article);
 
   useEffect(() => {
     getQuestionsTheme1();
     getAnswers();
+    getArticles();
   }, [currentQuestionNumber, endQuizz]);
 
   console.log(answers);
@@ -63,7 +75,7 @@ const QuizzTheme1 = () => {
     <>
       <Navbar />
       {endQuizz ? (
-        <div>{score} / 10</div>
+        <Finish />
       ) : (
         <div className="quizzComposant">
           <h1 className="bloc-h-g-h1">QUIZ DE PREVENTION TECHNICIEN</h1>
@@ -135,6 +147,14 @@ const QuizzTheme1 = () => {
           ) : (
             ""
           )}
+
+          {/* {choice ? (
+            <div className="popup">
+              <div>{article.content}</div>
+            </div>
+          ) : (
+            ""
+          )} */}
         </div>
       )}
     </>
