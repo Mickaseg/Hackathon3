@@ -5,7 +5,7 @@
   height: 50px;
   display: flex;
   flex-direction: row;
-  border: 2px solid pink;
+  /*   border: 2px solid pink; */
   align-items: center;
   justify-content: space-between;
 }

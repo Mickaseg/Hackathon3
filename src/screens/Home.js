@@ -38,9 +38,9 @@ const Home = () => {
               </p>
             </div>
             <NavLink to="/documentation">
-            <div className="ctaBleu containerHomeInfoBtn ">
-              <p>ACCEDER AU CONTENU D’INFORMATIONS</p>
-            </div>
+              <div className="ctaBleu containerHomeInfoBtn ">
+                <p>ACCEDER AU CONTENU D’INFORMATIONS</p>
+              </div>
             </NavLink>
           </div>
         </div>
@@ -57,7 +57,7 @@ const Home = () => {
                 créer de nouveaux reflexes !
               </p>
             </div>
-            <NavLink to="/quiz">
+            <NavLink to="/jobs">
               <div className="ctaBleu containerHomeQuizBtn">
                 <p>ACCEDER AU TEST DE CONNAISSANCES</p>
               </div>
