@@ -40,7 +40,9 @@ const Finish = ({ score }) => {
                 Etiam in libero neque.
               </p>
               <br></br>
-              <Link to="/"></Link>
+              <Link to="/documentation">
+                Cliquez ici pour accéder à la documentation
+              </Link>
             </div>
           </div>
           <div className="btnFinishFrame">

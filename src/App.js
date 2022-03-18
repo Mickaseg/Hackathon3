@@ -14,10 +14,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
   const { isAuthenticated, isLoading } = useAuth0();
-  // if (isLoading) {
-  //   return <div>Loading</div>;
-  // }
-  return (
+  if (isLoading) {
+    return <div>Loading</div>;
+  }
+  return isAuthenticated ? (
     <div className="App">
       <header></header>
       {/* <Navbar /> */}
@@ -31,12 +31,11 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
       </Routes>
     </div>
+  ) : (
+    <>
+      <Login />
+    </>
   );
-  // : (
-  //   <>
-  //     <Login />
-  //   </>
-  // );
 }
 
 export default App;
