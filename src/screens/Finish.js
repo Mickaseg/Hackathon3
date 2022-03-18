@@ -22,7 +22,9 @@ const Finish = ({ score }) => {
             <h2 className="score">Votre score : {score} / 10</h2>
 
             <div className="radioJobWrapper">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <p>
+                Votre score est <b>8/10</b> !
+              </p>
               <br></br>
               <p>
                 Fusce venenatis lorem non lorem tempor, a rhoncus mauris
@@ -34,10 +36,7 @@ const Finish = ({ score }) => {
               <br></br>
               <p>
                 Integer id odio vitae turpis iaculis luctus id ut elit.
-                Phasellus dictum facilisis maximus. Nullam pharetra fermentum
-                sapien, ut mattis eros ornare non. Ut sodales urna et massa
-                suscipit, ut consequat elit euismod. Vestibulum vel nibh massa.
-                Etiam in libero neque.
+                Phasellus dictum facilisis maximus.
               </p>
               <br></br>
               <Link to="/documentation">
