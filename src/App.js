@@ -17,7 +17,7 @@ function App() {
   if (isLoading) {
     return <div>Loading</div>;
   }
-  return isAuthenticated ? (
+  return (
     <div className="App">
       <header></header>
       {/* <Navbar /> */}
@@ -31,10 +31,6 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
       </Routes>
     </div>
-  ) : (
-    <>
-      <Login />
-    </>
   );
 }
 

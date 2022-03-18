@@ -137,7 +137,7 @@ const QuizzTheme2 = () => {
             ""
           )}
 
-          <div className="popup"></div>
+          {/* <div className="popup"></div> */}
         </div>
       )}
     </>
