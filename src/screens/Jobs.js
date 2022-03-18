@@ -1,9 +1,5 @@
 import "./screens-styles/Jobs.css";
-import { useState, useEffect } from "react";
-import axios from "axios";
-
 import Navbar from "../components/Navbar";
-import techs from "../assets/techs.jpg";
 import { Link } from "react-router-dom";
 
 const Jobs = () => {
